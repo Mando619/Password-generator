@@ -6,72 +6,68 @@ var generateBtn = document.querySelector("#generate");
 const lowerCase = 'abcdefghijklmnopqrstuvwxyz'.split('');
 const upperCase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
 const number = '0123456789'.split('');
-const special = '!@#$%^&*()_+';
+const special = '!@#$%^&*()_+'.split('');
 
-
+    function generatePassword() {
     
+// setting up password length
+      let passLength = parseInt(prompt("How long do you want your password to be? Please keep your password between 8 and 128 characters"));
+      while(passLength < 8 || passLength > 128 || isNaN(passLength)) {
+        passLength = prompts("Im sorry, please input an integer between 8 and 138.")
+      }
+        console.log('Password length is ' + passLength);
+
+
+
+      // prompts to help ask what kind of password
       const useLowerCase = confirm('Do you want to use lower case letters?');
       const useUpperCase = confirm('Do you want to use uppercase letters?');
-      const useNumber = confirm('Do you want to use numbers? ');
+      const useNumber = confirm('Do you want to use numbers?');
       const useSpecial = confirm('Do you want to use characters?');
 
-      let password = [];
+        
+      
+        // creating vars for customer responses, creating by their wants.
+          var userChoice = []
+
+          var password = ''
 
           if (useLowerCase) {
-            for (let i = 0; i < 2; i++) {
-                password.push('randomCharacter')
-            }
+             userChoice.push(lowerCase);
           }
+            console.log(userChoice);
 
           if (useUpperCase) {
-            password = password.concat(upperCase);
+           
+            userChoice.push( upperCase);
+            
           }
 
           if (useNumber) {
-            password = password.concat(useNumber);
+              userChoice.push(number);
+           // password.push(number);
           }
 
           if (useSpecial) {
-            password = password.concat(useSpecial);
+              userChoice.push(special);
           }
-            console.log(shuffle(password).join(''));
+      // creating a loop for all the arrays. use flat() for nested arrays
+            let currentUserChoice = userChoice.flat()
 
-            function shuffle(array) {
-              var currentIndex = array.length, temporaryValue, randomIndex;
-
-                // shufflees elements that remain
-              while (0 !== currentIndex) {
-
-               // To pick a remaining element 
-                randomIndex = Math.floor(Math.random() * currentIndex);
-                currentIndex -= 1;
-
-                //to switch it with a current element
-                TemporaryValue = array[currentIndex];
-                array[currentIndex] = array[randomIndex];
-                array[randomIndex] = temporaryValue;
-              }
-
-            return array;
-
-            }
-
-// setting up password length
-  let passLength = parseInt(prompt("How long do you want your password to be? Please keep your password between 8 and 128 characters"));
-  while(passLength < 8 || passLength > 128 || isNaN(passLength)) {
-    passLength = prompts("Im sorry, please input an integer between 8 and 138.")
-  }
-    console.log('Password length is ' + passLength);
-
-
-
-
-
-
-
-
+          for (var i= 0; i < passLength; i++) {
+            password = password + 
+            currentUserChoice[Math.floor(Math.random() * currentUserChoice.length)]
+          }
+            return password;
+          
+        }
+            console.log(password)
+          
+          
 // Write password to the #password input
 function writePassword() {
+
+   
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
