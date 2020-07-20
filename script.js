@@ -31,12 +31,11 @@ const special = '!@#$%^&*()_+'.split('');
           var userChoice = []
 
           var password = ''
-
+        // used push() method to add new items at the end of an array, returning new length
           if (useLowerCase) {
              userChoice.push(lowerCase);
           }
-            console.log(userChoice);
-
+           
           if (useUpperCase) {
            
             userChoice.push( upperCase);
@@ -45,7 +44,7 @@ const special = '!@#$%^&*()_+'.split('');
 
           if (useNumber) {
               userChoice.push(number);
-           // password.push(number);
+           
           }
 
           if (useSpecial) {
@@ -60,7 +59,7 @@ const special = '!@#$%^&*()_+'.split('');
           }
             return password;
           
-        }
+          }
             console.log(password)
           
           
