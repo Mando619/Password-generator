@@ -13,7 +13,7 @@ I WANT to randomly generate a password that meets certain criteria
 SO THAT I can create a strong password that provides greater security
 
 
-## Introudction 
+## Introduction 
 
  This project was created using Javascript, CSS, and HTML languages. It's general purpose is to generate a random password. The program created lets a user create a password ranging from 8-128 characters. In these characters, it ranges from a random group of: Lower case/upper case letters, numbers, and special characters.
 
