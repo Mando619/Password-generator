@@ -2,15 +2,16 @@
 var generateBtn = document.querySelector("#generate"); 
 
 
-// my arrays used for generating password
+// My arrays used for generating password
+// Used split() in the strings to turn into an array of substrings
 const lowerCase = 'abcdefghijklmnopqrstuvwxyz'.split('');
 const upperCase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
 const number = '0123456789'.split('');
 const special = '!@#$%^&*()_+'.split('');
-  // function made to generate a password
+  // Function made to generate a password
     function generatePassword() {
     
-// setting up password length
+// Setting up password length
       let passLength = parseInt(prompt("How long do you want your password to be? Please keep your password between 8 and 128 characters"));
       while(passLength < 8 || passLength > 128 || isNaN(passLength)) {
         passLength = prompts("Im sorry, please input an integer between 8 and 138.")
@@ -19,7 +20,7 @@ const special = '!@#$%^&*()_+'.split('');
 
 
 
-      // prompts to help ask what kind of password
+      // Prompts to help ask what kind of password
       const useLowerCase = confirm('Do you want to use lower case letters?');
       const useUpperCase = confirm('Do you want to use uppercase letters?');
       const useNumber = confirm('Do you want to use numbers?');
@@ -27,11 +28,11 @@ const special = '!@#$%^&*()_+'.split('');
 
         
       
-        // creating vars for customer responses, creating by their wants.
+        // Creating vars for customer responses, creating by their wants.
           var userChoice = []
 
           var password = ''
-        // used push() method to add new items at the end of an array, returning new length
+        // Used push() method to add new items at the end of an array, returning new length
           if (useLowerCase) {
              userChoice.push(lowerCase);
           }
@@ -49,7 +50,7 @@ const special = '!@#$%^&*()_+'.split('');
           if (useSpecial) {
             userChoice.push(special);
           }
-      // creating a loop for all the arrays. use flat() for nested arrays
+      // Creating a loop for all the arrays. Used flat() for nested arrays
             let currentUserChoice = userChoice.flat()
 
           for (var i= 0; i < passLength; i++) {
