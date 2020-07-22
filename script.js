@@ -7,7 +7,7 @@ const lowerCase = 'abcdefghijklmnopqrstuvwxyz'.split('');
 const upperCase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
 const number = '0123456789'.split('');
 const special = '!@#$%^&*()_+'.split('');
-
+  // function made to generate a password
     function generatePassword() {
     
 // setting up password length
@@ -37,18 +37,17 @@ const special = '!@#$%^&*()_+'.split('');
           }
            
           if (useUpperCase) {
-           
             userChoice.push( upperCase);
             
           }
 
           if (useNumber) {
-              userChoice.push(number);
+            userChoice.push(number);
            
           }
 
           if (useSpecial) {
-              userChoice.push(special);
+            userChoice.push(special);
           }
       // creating a loop for all the arrays. use flat() for nested arrays
             let currentUserChoice = userChoice.flat()
@@ -64,13 +63,12 @@ const special = '!@#$%^&*()_+'.split('');
           
           
 // Write password to the #password input
-function writePassword() {
+  function writePassword() {
+    
+    var password = generatePassword();
+    var passwordText = document.querySelector("#password");
 
-   
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
-
-  passwordText.value = password;
+    passwordText.value = password;
 
     
 }
