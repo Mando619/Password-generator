@@ -14,7 +14,7 @@ const special = '!@#$%^&*()_+'.split('');
 // Setting up password length
       let passLength = parseInt(prompt("How long do you want your password to be? Please keep your password between 8 and 128 characters"));
       while(passLength < 8 || passLength > 128 || isNaN(passLength)) {
-        passLength = prompts("Im sorry, please input an integer between 8 and 138.")
+        passLength = prompts("Im sorry, please input an integer between 8 and 138.");
       }
         console.log('Password length is ' + passLength);
 
