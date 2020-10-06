@@ -25,3 +25,14 @@ No installation is required.
 ## License
 
 GNU General Public License
+
+## Author 
+
+For further inquiry's that pertain to this application, 
+please reach me at Libryum33@hotmail.com.
+
+* [GitHub Profile](https://github.com/Mando619)
+
+* [Linked In Profile](https://www.linkedin.com/in/armando-estrada-0a5304118/)
+
+* [Portfolio](https://mando619.github.io/Portfolio-Updated/)
