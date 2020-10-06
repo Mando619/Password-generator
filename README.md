@@ -12,6 +12,8 @@ AS AN employee with access to sensitive data
 I WANT to randomly generate a password that meets certain criteria
 SO THAT I can create a strong password that provides greater security
 
+This was created using JavaScript, to ipliment a users random password to be generated.
+
 
 ## Introduction 
 
